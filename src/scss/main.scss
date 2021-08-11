@@ -116,3 +116,10 @@
 		display: block;
 	}
 }
+
+.qqoo::before{
+	display: inline-block;
+	transform: rotate(180deg);
+	width: 12px;
+	transition: transform .5s ease;
+}

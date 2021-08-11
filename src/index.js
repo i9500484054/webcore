@@ -1,21 +1,28 @@
 import Swiper from 'swiper';
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 import './js/app.js';
 import './scss/main.scss';
 import '/index.html';
 
+SwiperCore.use([Navigation, Pagination]);
 
 const swiperService = new Swiper('.swiper-container--service', {
-	// Optional parameters
-	// loop: true,
 	width: 250,
 	spaceBetween: 10,
 	centeredSlides: true,
 
 
 	// And if we need scrollbar
-	scrollbar: {
-		el: '.swiper-scrollbar',
-	},
+	// scrollbar: {
+	// 	el: '.swiper-scrollbar'	
+	// },
+	// breakpoints: {
+	// 	1140: {
+	// 		scrollbar: {
+	// 			el: ''
+	// 		},
+	// 	}
+	// }
 });
 
 const swiperBrands = new Swiper('.swiper-container--brands', {

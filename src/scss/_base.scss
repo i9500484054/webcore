@@ -105,12 +105,11 @@ input:-ms-input-placeholder {@include text($color-Cadet-blue-crayola, 16px, 24p
 @media (min-width: $screen-table) {
   .cps-main {
     background-color: $color-white;
-    max-width: 1480px;
+    max-width: 1742px;
   }
 }
 @media (min-width: $screen-desktop) {
   .cps-main {
-    max-width: 1480px;
     padding-left: 345px;
     padding-right: 33px;
     background-color: $color-smoky-white;

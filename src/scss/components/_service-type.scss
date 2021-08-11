@@ -93,7 +93,7 @@
 		display: none;
 	}
 	.service-list-type-tab {
-		max-width: 951px;
+		max-width: 1192px;
 		display: flex;
 		flex-wrap: wrap;
 		height: 165px;
@@ -149,14 +149,11 @@
 		margin-left: 32px;
 	}
 	.service-list-type-tab {
-		max-width: 1120px;
+		max-width: 1440px;
 		padding: 0;
 		margin-left: 32px;
 		&__item {
-			margin-right: 53px;
-		}
-		&__item:nth-child(4n) {
-			margin-right:0;
+			margin-right: 33px;
 		}
 		&__item--none {
 			display: block;
