@@ -75,7 +75,7 @@
 	align-items: center;
 	&__wrapp {
 		overflow: hidden;
-    height: 75px;
+    height: 90px;
 		padding-left: 16px;
 		padding-right: 16px;
 	}
@@ -98,6 +98,7 @@
 	}
 
 	&__img {
+		margin-top: 20px;
 	}
 }
 

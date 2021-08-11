@@ -112,3 +112,11 @@ input:-ms-input-placeholder {@include text($color-Cadet-blue-crayola, 16px, 24p
     background-color: $color-smoky-white;
   }
 }
+@media (min-width: 1920px) {
+  .cps-main {
+    margin: 0 auto;
+  }
+  .cps-footer {
+    margin: 0 auto;
+  }
+}
