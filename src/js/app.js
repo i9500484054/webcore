@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (test === 'six-btn') {
 				let activeAsaid =	document.querySelector(`[data-target="${path}"]`)
 				activeAsaid.classList.add('btn--menu')
-				
 			} else {
 				let activePopup =	document.querySelector(`[data-target="${path}"]`)
 				activePopup.classList.add('btn--active')
@@ -58,10 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			if (test === 'three-allopen') {
 				document.querySelector(`[data-target="${path}"]`).classList.toggle('all-open-content--active')
+				tabsBtn.classList.toggle('qqoo')
 			} else {
 				document.querySelector(`[data-target="${path}"]`).classList.toggle('all-open--active')
+				tabsBtn.classList.toggle('qqoo')
 			}
-
 			})
 		})
 
@@ -74,13 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			})
 
 			tabsBtn.classList.add('nav-menu__link--active')
-
 			})
 		})
 	
 })
-	
-
-
-
-

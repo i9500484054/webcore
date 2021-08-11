@@ -71,7 +71,6 @@
 }
 
 
-
 .all-open--active {
 	height: 434px;
 	transition: height .7s ease;
@@ -99,7 +98,7 @@
 
 	top:0;
 	right: 440px;
-	display: block;
+	display: none;
 	width: 100vw;
 	height: 100vh;
 
@@ -111,4 +110,16 @@
 	.cps-aside__bg {
 		display: none;
 	}
+}
+@media (min-width: $screen-table){
+	.cps-popap__bg {
+		display: block;
+	}
+}
+
+.qqoo::before{
+	display: inline-block;
+	transform: rotate(180deg);
+	width: 12px;
+	transition: transform .5s ease;
 }

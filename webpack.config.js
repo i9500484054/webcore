@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -29,7 +28,8 @@ module.exports = {
 			filename: 'index.html',
 			minify: {
 				collapseWhitespace: isProd
-			}
+			},
+			favicon: './assets/favicon.ico'
 		}),
 		new MiniCssExtractPlugin({
 			filename: `./css/${filename('css')}`
@@ -37,11 +37,8 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{from: path.resolve(__dirname, 'src/assets'), to:path.resolve(__dirname, 'dist/assets')}
-				// {from: path.resolve(__dirname, 'src/img'), to:path.resolve(__dirname, 'dist/img')},
-				// {from: path.resolve(__dirname, 'src/fonts'), to:path.resolve(__dirname, 'dist/fonts')}
 			]
 		}),
-		new FaviconsWebpackPlugin('./assets/favicon.ico'),
 	],
 	module: {
     rules: [
@@ -49,18 +46,6 @@ module.exports = {
 				test: /\.html$/i,
 				loader: 'html-loader'
 			},
-      // {
-      //   test: /\.css$/i,
-      //   use: [
-			// 		{
-			// 			loader: MiniCssExtractPlugin.loader,
-			// 			options: {
-			// 				hmr: isDev
-			// 			}
-			// 		},
-			// 		'css-loader'
-			// 	],
-      // },
       {
         test: /\.s[ac]ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
